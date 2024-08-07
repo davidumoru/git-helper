@@ -1,15 +1,9 @@
+const { promptForBranchName, promptForAction } = require("../utils/prompts");
 const simpleGit = require("simple-git");
-const inquirer = require("inquirer");
 const git = simpleGit();
 
 const createBranch = async () => {
-  const { branchName } = await inquirer.prompt([
-    {
-      type: "input",
-      name: "branchName",
-      message: "Enter the branch name:",
-    },
-  ]);
+  const branchName = await promptForBranchName("Enter the branch name:");
 
   try {
     await git.branch([branchName]);
@@ -20,13 +14,9 @@ const createBranch = async () => {
 };
 
 const switchBranch = async () => {
-  const { branchName } = await inquirer.prompt([
-    {
-      type: "input",
-      name: "branchName",
-      message: "Enter the branch name to switch to:",
-    },
-  ]);
+  const branchName = await promptForBranchName(
+    "Enter the branch name to switch to:"
+  );
 
   try {
     await git.checkout(branchName);
@@ -37,13 +27,9 @@ const switchBranch = async () => {
 };
 
 const deleteBranch = async () => {
-  const { branchName } = await inquirer.prompt([
-    {
-      type: "input",
-      name: "branchName",
-      message: "Enter the branch name to delete:",
-    },
-  ]);
+  const branchName = await promptForBranchName(
+    "Enter the branch name to delete:"
+  );
 
   try {
     await git.branch(["-d", branchName]);

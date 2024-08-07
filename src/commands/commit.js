@@ -1,15 +1,9 @@
+const { promptForCommitMessage } = require("../utils/prompts");
 const simpleGit = require("simple-git");
-const inquirer = require("inquirer");
 const git = simpleGit();
 
 const commitChanges = async () => {
-  const { message } = await inquirer.prompt([
-    {
-      type: "input",
-      name: "message",
-      message: "Enter the commit message:",
-    },
-  ]);
+  const message = await promptForCommitMessage();
 
   try {
     await git.commit(message);
