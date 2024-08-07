@@ -1,10 +1,8 @@
 const inquirer = require("inquirer");
-const {
-  initRepo,
-  addFiles,
-  commitChanges,
-  pushChanges,
-} = require("./commands");
+const { initRepo } = require("./commands/init");
+const { addFiles } = require("./commands/add");
+const { commitChanges } = require("./commands/commit");
+const { pushChanges } = require("./commands/push");
 const {
   createBranch,
   switchBranch,
