@@ -1,0 +1,22 @@
+{
+  "name": "git-helper",
+  "version": "1.0.0",
+  "description": "CLI tool that simplifies common Git commands",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "CLI",
+    "Git"
+  ],
+  "author": "David Umoru",
+  "license": "MIT",
+  "dependencies": {
+    "inquirer": "^10.1.8",
+    "simple-git": "^3.25.0"
+  }
+}
