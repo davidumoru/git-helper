@@ -16,7 +16,7 @@
   "author": "David Umoru",
   "license": "MIT",
   "dependencies": {
-    "inquirer": "^10.1.8",
+    "inquirer": "^8.2.4",
     "simple-git": "^3.25.0"
   },
   "devDependencies": {
