@@ -1,8 +1,11 @@
 {
-  "name": "git-helper",
+  "name": "git-ease",
   "version": "1.0.0",
   "description": "CLI tool that simplifies common Git commands",
   "main": "index.js",
+  "bin": {
+    "git-ease": "src/index.js"
+  },
   "directories": {
     "test": "tests"
   },

@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 const inquirer = require("inquirer");
 const { initRepo } = require("./commands/init");
 const { addFiles } = require("./commands/add");
